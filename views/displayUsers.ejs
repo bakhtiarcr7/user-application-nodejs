@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('layout/header')  %> 
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('layout/navbar')  %> 
+    <div class="display-container">
+        <h1>Display All Todos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>City</th>
+                    <th>Postalcode</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0;i<data.length;i++){%>
+                    <tr>
+                        <td>
+                            <img src=<%= '/images/'+data[i].image %> alt="Could not load" width="100px">
+                        <%= data[i].name %></td>
+                        <td><%= data[i].email %></td>
+                        <td><%= data[i].phone %></td>
+                        <td><%= data[i].city %></td>
+                        <td><%= data[i].postalcode %></td>
+                        <td>
+                            <a href=<%= "/api/deleteUser?id="+data[i]._id %> class="del-link">Delete</a>
+                            <a href=<%= "/api/updateUser?id="+data[i]._id %> class="update-link">Update</a>
+                        </td>
+                    </tr>
+                    <% } %> 
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
