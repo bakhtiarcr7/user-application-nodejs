@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <%- include('layout/header')  %> 
+    <link rel="stylesheet" href="../public/css/style.css"/>
     <title>Document</title>
 </head>
 <body>
     <%- include('layout/navbar')  %> 
-    <div class="form-container">
+    <div class="addUser" >
         <form method="POST" action="/api/addUserItem" enctype="multipart/form-data">
-            <div class="form-field">
-                <input type="text" placeholder="Enter your name" name="name">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Enter your name" name="name">
             </div>
-            <div class="form-field">
-              <input type="text" placeholder="Enter email" name="email">
+            <div class="form-group">
+              <input  class="form-control" type="email" placeholder="Enter email" name="email">
             </div>
-            <div class="form-field">
-              <input type="text" placeholder="Enter phone" name="phone">
+            <div class="form-group">
+              <input  class="form-control" type="text" placeholder="Enter phone" name="phone">
             </div>
-            <div class="form-field">
-              <input type="text" placeholder="Enter city" name="city">
+            <div class="form-group">
+              <input  class="form-control" type="text" placeholder="Enter city" name="city">
             </div>
-            <div class="form-field">
-              <input type="number" placeholder="Enter postalcode" name="postalcode">
+            <div class="form-group">
+              <input  class="form-control" type="number" placeholder="Enter postalcode" name="postalcode">
             </div>
-            <div class="form-field">
-                <input type="file" placeholder="Select image" name="image">
+            <div class="form-group">
+                <input  class="form-control" type="file" placeholder="Select image" name="image">
             </div>
             
-            <div class="form-field">
-                <button type="submit" class="btn">Add Item</button>
+            <div class="form-control">
+                <button type="submit" class="btn btn-primary">Add Item</button>
             </div>
         </form>
     </div>

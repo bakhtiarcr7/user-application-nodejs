@@ -2,3 +2,9 @@
 img{
     border-radius: 20px;
 }
+.addUser > div{
+    padding:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+}
